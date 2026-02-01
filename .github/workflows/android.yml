@@ -8,10 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: QuietHours   # 👈 IMPORTANT (your project folder)
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -25,14 +21,14 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Grant execute permission to gradlew
-        run: chmod +x gradlew
+      - name: Install Gradle
+        run: sudo apt-get install gradle -y
 
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
+      - name: Build Debug APK using system Gradle
+        run: gradle assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: QuietHours-debug-apk
-          path: QuietHours/app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
