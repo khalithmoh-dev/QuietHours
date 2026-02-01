@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QuietHours Status"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_app_enabled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="App Enabled" />
+
+    <TextView
+        android:id="@+id/tv_dialer_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dialer Status: Unknown" />
+
+    <Button
+        android:id="@+id/btn_set_dialer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Set as Default Dialer" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select Mode"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_modes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rb_busy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Busy Mode (Reject All)" />
+
+        <RadioButton
+            android:id="@+id/rb_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Work Mode (Rejected Ghost List)" />
+
+        <RadioButton
+            android:id="@+id/rb_sleep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sleep Mode (Favorites Only)" />
+
+        <RadioButton
+            android:id="@+id/rb_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Mode" />
+    </RadioGroup>
+
+</LinearLayout>

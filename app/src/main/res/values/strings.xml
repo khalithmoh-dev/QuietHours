@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuietHours</string>
+    <string name="title_home">Home</string>
+    <string name="title_ghost_numbers">Ghost Numbers</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_ghost_log">Ghost Log</string>
+</resources>
