@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_schedule, R.id.navigation_ghost_log
             )
         )
-        setupWithNavController(binding.navView)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.navView.setupWithNavController(navController)
 
         requestPermissions()
     }

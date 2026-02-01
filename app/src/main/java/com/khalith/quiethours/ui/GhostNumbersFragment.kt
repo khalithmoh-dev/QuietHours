@@ -63,7 +63,7 @@ class GhostNumbersFragment : Fragment() {
             val name = nameInput.text.toString()
             val number = numberInput.text.toString()
             if (number.isNotEmpty()) {
-                viewModel.insertGhostNumber(GhostNumber(name = name, number = number))
+                viewModel.insertGhostNumber(GhostNumber(number, name))
             }
         }
         builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
