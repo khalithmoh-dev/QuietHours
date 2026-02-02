@@ -20,7 +20,9 @@ abstract class GhostDatabase : RoomDatabase() {
                     context.applicationContext,
                     GhostDatabase::class.java,
                     "ghost_database"
-                ).build()
+                )
+                .fallbackToDestructiveMigration()
+                .build()
                 INSTANCE = instance
                 instance
             }
